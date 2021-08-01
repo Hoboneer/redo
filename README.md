@@ -6,8 +6,18 @@ multi-output rules would be nice too.
 
 ## Planned extensions
 
-* Dependencies on environment variables and non-project files (such as the C compiler)
+* Dependencies on environment variables and non-project files (such as the C
+  compiler)
+  - With symlink special-casing
+    - default: track dereferenced file
+    - no-follow: track the symlink itself
 * Multi-output rules (like with LaTeX)
+  - Maybe `.do` files can specify *additional* outputs?
+  - With `redo-addtarget`
+  - After a cold run, the central database can keep track of it?
+  - Benefits: compatible with other `redo` implementations (other than the new
+    command)
+  - Consequences: a "main" target has to be decided beforehand
 * Directory dependencies?  (I'm not sure how useful this is)
 
 ## Goals
